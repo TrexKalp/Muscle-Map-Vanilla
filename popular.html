@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title> MuscleMap</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/es6-promise/dist/es6-promise.auto.min.js"
+    ></script>
+
+    <script type="text/javascript" src="redist/jquery.3.5.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="../dist/jquery.imagemapster.js"
+    ></script>
+        
+    </head>
+    <body>
+        <div class="d-flex sticky-top" id="wrapper">
+            <!-- Sidebar-->
+            <!--<div class="border-end bg-white sticky-top" id="sidebar-wrapper">
+                <div class="sidebar-heading border-bottom bg-light">Muscle Map</div>
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#pop">Popular</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#body">Bodyweight</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#dumb">Dumbbells</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#cable">Cables</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#stretch">Stretches</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#work">Workouts</a>
+                </div>
+            </div>
+          -->
+
+
+
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark position-fixed col-3 px-1 bg-dark position-fixed">
+              <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 nav flex-column flex-nowrap vh-100 overflow-auto text-white p-2">
+                  <a href="#pop" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                      <span class="fs-3 d-none d-sm-inline">MuscleMap</span>
+                  </a>
+                  <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                      <li class="nav-item">
+                          <a href="#pop" class="nav-link align-middle px-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-heart" viewBox="0 0 16 16">
+                              <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12ZM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Z"/>
+                              <path d="M8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
+                            </svg> <span class="ms-1 d-sm-inline mt-5">Popular</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#body" class="nav-link px-0 align-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                              <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/>
+                            </svg> <span class="ms-1 d-none d-sm-inline">Bodyweight</span> </a>
+                      </li>
+                      <li>
+                        <a href="#dumb" class="nav-link px-0 align-middle">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-align-center" viewBox="0 0 16 16">
+                            <path d="M8 1a.5.5 0 0 1 .5.5V6h-1V1.5A.5.5 0 0 1 8 1zm0 14a.5.5 0 0 1-.5-.5V10h1v4.5a.5.5 0 0 1-.5.5zM2 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7z"/>
+                          </svg> <span class="ms-1 d-none d-sm-inline">Barbell</span></a>
+                    </li>
+                      <li>
+                          <a href="#dumb" class="nav-link px-0 align-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                              <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                            </svg> <span class="ms-1 d-none d-sm-inline">Dumbbells</span></a>
+                      </li>
+                      <li>
+                          <a href="#cable" class="nav-link px-0 align-middle ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
+                            </svg> <span class="ms-1 d-none d-sm-inline">Cables</span></a>
+                      </li>
+                      <li>
+                        <a href="#stretch" class="nav-link px-0 align-middle ">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-expand" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8ZM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2ZM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10Z"/>
+                          </svg> <span class="ms-1 d-none d-sm-inline">Stretches</span></a>
+                      </li>
+                      <li>
+                        <a href="#work" class="nav-link px-0 align-middle ">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"/>
+                          </svg> <span class="ms-1 d-none d-sm-inline">Workouts</span></a>
+                      </li>
+                      <li>
+                        <a href="#work" class="nav-link px-0 align-middle ">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-egg-fried" viewBox="0 0 16 16">
+                            <path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                            <path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z"/>
+                          </svg> <span class="ms-1 d-none d-sm-inline">Protein Hacks</span></a>
+                      </li>
+                  </ul>
+                  <hr>
+                  <!--
+                  <div class="dropdown pb-4">
+                      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                          <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                          <span class="d-none d-sm-inline mx-1">loser</span>
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                          <li><a class="dropdown-item" href="#">New project...</a></li>
+                          <li><a class="dropdown-item" href="#">Settings</a></li>
+                          <li><a class="dropdown-item" href="#">Profile</a></li>
+                          <li>
+                              <hr class="dropdown-divider">
+                          </li>
+                          <li><a class="dropdown-item" href="#">Sign out</a></li>
+                      </ul>
+                  </div>
+                  -->
+              </div>
+          </div>
+
+
+            <!-- Page content wrapper-->
+            <div id="page-content-wrapper">
+                <!-- Top navigation
+                <nav class="navbar-fixed-top navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <div class="container-fluid">
+                        <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                                <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#!">Action</a>
+                                        <a class="dropdown-item" href="#!">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#!">Something else here</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>-->
+                <!-- Page content-->
+                <div class="container-fluid col-10 offset-2">
+
+                  
+                    <h1 class="mt-2" id="pop">Popular Exercises</h1>
+                    <div id="map_demo">
+                      <p>
+                        
+                      </p>
+                      
+                      <div class="">
+
+                        <img class="img-fluid text-center" id="muscle" src="images/musclemap3.png" usemap="#muscle" />
+        
+                        
+                         
+                        
+        
+                        <script type="text/javascript">
+        
+                          $(document).ready(function () {
+                            $('#muscle').mapster({
+                              fillOpacity: 0.4,
+                              fillColor: '00FFFF',
+                              strokeColor: '3320FF',
+                              strokeOpacity: 1.5,
+                              strokeWidth: 3,
+                              stroke: true,
+                              isSelectable: true,
+                              singleSelect: true,
+                              mapKey: 'name',
+                              listKey: 'name',
+                              showToolTip: false,
+                              clickNavigate: true,
+                              image: 5,
+                            }).parent().css({"margin":"0 auto"});
+                          });
+        
+                          
+        
+                        </script>
+                        <map id="muscle" name="muscle">
+                          <area
+                            href="bicep.html#bicep"
+                            target="_blank"
+                            shape="poly"
+                            name="bicep"
+                            coords="117,274,128,270,136,266,146,256,154,235,155,226,157,211,147,204,139,206,132,208,125,214,119,224,115,235,114,256,116,272"
+                            
+                          />
+                          <area
+                            href="bicep.html#bicep"
+                            target="_blank"
+                            shape="poly"
+                            name="bicep"
+                            coords="320,273,324,257,323,245,321,234,318,225,316,218,310,212,304,210,296,205,290,202,281,208,281,217,282,229,283,240,287,251,292,261,304,268"
+                          />
+                          <area
+                            href="abs.html#ab"
+                            target="_blank"
+                            shape="poly"
+                            name="abs"
+                            coords="216,374,223,374,230,370,235,355,240,341,242,329,245,318,245,308,248,300,250,291,250,281,252,268,250,255,251,243,250,233,248,223,240,219,231,218,224,216,218,218,212,218,204,219,193,221,186,222,183,234,183,248,183,262,182,279,184,294,188,312,191,327,193,339,196,351,200,362,206,372"
+                          />
+                          <area
+                            href="forearms.html#forearm"
+                            target="_blank"
+                            shape="poly"
+                            name="forearms"
+                            coords="71,339,85,350,88,344,93,336,99,327,104,321,111,314,118,308,124,303,131,295,136,287,139,279,141,267,133,268,123,273,117,274,113,262,112,254,103,262,95,275,87,298"
+                          />
+                          <area
+                            href="forearms.html#forearm"
+                            target="_blank"
+                            shape="poly"
+                            name="forearms"
+                            coords="296,267,298,279,303,293,310,303,318,310,327,317,335,325,342,334,347,342,350,350,355,346,361,342,366,339,363,331,360,322,357,313,352,303,349,294,345,284,342,275,337,267,331,260,325,256,321,273"
+                          />
+                          <area
+                            href="chest.html#chest"
+                            target="_blank"
+                            shape="poly"
+                            name="chest"
+                            coords="149,203,153,196,158,190,162,185,165,179,170,174,174,169,180,166,186,165,191,165,196,167,201,170,206,174,212,179,214,187,215,198,216,207,215,215,208,217,201,218,194,219,187,220,180,221,173,219,162,215"
+                          />
+                          <area
+                            href="chest.html#chest"
+                            target="_blank"
+                            shape="poly"
+                            name="chest"
+                            coords="225,181,229,175,235,170,241,167,248,163,255,163,261,168,268,174,274,183,280,192,286,199,284,207,273,215,263,220,255,222,243,221,227,217,221,214,222,203,223,191"
+                          />
+                          <area
+                            href="delts.html#delt"
+                            target="_blank"
+                            shape="poly"
+                            name="delt"
+                            coords="127,207,125,195,126,183,130,174,134,166,141,160,148,156,154,156,161,155,167,155,174,156,184,161,178,165,170,171,164,180,157,191,150,200,139,206,129,212"
+                          />
+                          <area
+                            href="delts.html#delt"
+                            target="_blank"
+                            shape="poly"
+                            name="delt"
+                            coords="285,157,291,160,296,162,302,165,308,171,310,182,312,191,312,202,309,211,299,207,293,202,288,203,276,184,268,173,261,166,254,163,259,156,291,160"
+                          />
+                          <area
+                            href="traps.html#trap"
+                            target="_blank"
+                            shape="poly"
+                            name="trap"
+                            coords="198,126,200,133,203,142,206,149,210,157,212,164,204,160,197,159,189,157,181,156,172,155,184,149,191,145,195,138"
+                          />
+                          <area
+                            href="traps.html#trap"
+                            target="_blank"
+                            shape="poly"
+                            name="trap"
+                            coords="226,165,227,156,232,148,235,139,237,132,240,123,243,140,248,147,254,152,260,153,267,156,253,157,240,159"
+                          />
+                          <area
+                            href="obliques.html#oblique"
+                            target="_blank"
+                            shape="poly"
+                            name="oblique"
+                            coords="162,323,162,310,163,296,164,282,165,270,165,259,163,249,159,239,156,232,157,219,158,212,167,217,176,220,185,222,183,238,183,248,183,265,183,277,183,287,186,300,189,319,192,333,194,347,200,361,180,338"
+                          />
+                          <area
+                            href="obliques.html#obliquee"
+                            target="_blank"
+                            shape="poly"
+                            name="oblique"
+                            coords="250,224,258,223,265,219,270,217,279,213,282,228,282,238,276,243,273,254,271,264,273,276,274,289,276,305,275,317,275,324,269,328,261,334,254,342,245,351,239,360,233,365,241,343,245,320,248,302,252,278,252,250"
+                          />
+                          <area
+                            href="quads.html#quad"
+                            target="_blank"
+                            shape="poly"
+                            name="quad"
+                            coords="163,325,158,337,154,350,149,367,145,383,144,405,143,424,143,434,146,445,151,456,156,470,162,480,167,476,170,468,176,476,182,484,189,487,195,490,196,477,199,467,202,458,206,446,207,437,209,427,210,417,211,408,214,397,214,387,210,377,199,359,182,338"
+                          />
+                          <area
+                            href="quads.html#quad"
+                            target="_blank"
+                            shape="poly"
+                            name="quad"
+                            coords="242,490,242,481,237,470,234,457,232,446,229,432,228,421,227,411,225,399,223,388,226,378,230,372,235,366,240,358,246,351,252,343,259,336,265,332,272,326,276,325,281,338,284,351,287,361,290,371,291,383,293,395,293,407,295,420,294,433,292,445,287,456,283,467,275,481,268,469,258,482"
+                          />
+                          <!--
+                          <area
+                            href="http://www.google.com"
+                            target="_blank"
+                            shape="poly"
+                            name="knee"
+                            coords="145,443,146,450,148,460,151,469,153,478,153,493,151,512,156,508,161,504,167,507,171,515,176,517,183,519,188,521,190,514,192,506,195,499,196,491,185,486,176,474,171,466,167,478,160,478,156,466,153,459"
+                          />
+                          
+                          <area
+                            href="http://www.google.com"
+                            target="_blank"
+                            shape="poly"
+                            name="knee"
+                            coords="243,492,244,501,246,509,249,516,251,521,256,518,261,518,266,514,271,508,276,504,281,508,288,513,288,503,285,492,285,484,285,476,287,468,290,461,293,446,288,455,282,469,275,479,271,476,268,468,263,476,258,482,250,486"
+                          />
+                          -->
+                          <area
+                            href="calves.html#calf"
+                            target="_blank"
+                            shape="poly"
+                            name="calf"
+                            coords="162,633,158,622,155,607,152,596,150,584,150,574,149,563,149,554,149,543,149,533,149,517,146,526,144,538,143,546,140,556,140,569,138,579,139,590,142,602,143,612,146,623,147,632,149,644,144,651,141,661,137,670,133,680,127,687,126,695,132,697,139,699,144,699,149,699,154,698,161,695,163,689,164,680,167,673,171,666,167,647,167,631,167,619,170,607,175,598,179,586,182,576,185,563,186,553,186,544,188,533,188,523,183,530,178,539,173,551,169,562,167,574,165,588,164,603"
+                          />
+                          <area
+                            href="calves.html#calf"
+                            target="_blank"
+                            shape="poly"
+                            name="calf"
+                            coords="276,634,279,625,281,615,283,604,285,593,286,581,288,568,288,556,288,545,288,534,289,516,292,534,297,551,299,565,299,578,298,588,298,601,295,612,292,623,290,635,289,646,294,655,298,665,300,673,305,680,311,686,311,694,304,695,297,696,291,697,285,697,279,695,274,689,273,678,269,671,266,663,272,643,272,626,270,614,267,606,263,599,260,591,257,583,255,574,253,565,253,556,252,548,252,539,251,525,257,535,263,548,267,562,270,575,274,593,275,609"
+                          />
+                          <area
+                            href="traps.html#trap"
+                            target="_blank"
+                            shape="poly"
+                            name="trapb"
+                            coords="597,141,609,134,617,126,626,113,632,114,637,114,642,114,649,114,654,113,657,120,662,126,669,133,674,137,682,142,670,139,654,135,641,132,632,136,620,138,609,140"
+                          />
+                          <area
+                            href="delts.html#delt"
+                            target="_blank"
+                            shape="poly"
+                            name="deltb"
+                            coords="543,201,542,190,542,178,544,168,551,159,558,153,569,147,581,145,589,145,597,145,602,153,590,164,579,169,572,177,572,185,558,191,550,195"
+                          />
+                          <area
+                            href="delts.html#delt"
+                            target="_blank"
+                            shape="poly"
+                            name="deltb"
+                            coords="739,201,740,187,738,172,733,162,727,155,720,150,712,145,703,144,694,143,684,144,680,150,690,160,700,168,708,171,712,180,711,184,721,188,730,193"
+                          />
+                          <area
+                            href="upperb.html#upperb"
+                            target="_blank"
+                            shape="poly"
+                            name="upperb"
+                            coords="641,251,635,242,631,233,625,225,621,216,617,210,614,200,613,188,612,176,610,166,605,155,598,146,605,142,612,140,620,139,626,137,634,134,641,132,648,135,656,138,663,139,672,141,677,142,683,145,677,155,671,166,670,180,668,199,664,211,654,227,647,239"
+                          />
+                          <area
+                            href="shoulders.html#shoulder"
+                            target="_blank"
+                            shape="poly"
+                            name="shoulder"
+                            coords="612,201,606,201,599,206,593,209,586,209,579,207,574,202,571,194,571,186,571,178,573,172,578,169,583,167,589,164,593,159,599,152,605,156,609,166,613,177,613,189"
+                          />
+                          <area
+                            href="shoulders.html#shoulder"
+                            target="_blank"
+                            shape="poly"
+                            name="shoulder"
+                            coords="669,202,675,201,680,204,686,209,691,211,697,210,702,208,707,204,708,196,710,189,710,183,709,176,705,170,699,167,692,163,686,157,681,153,675,160,671,170,668,185"
+                          />
+                          <area
+                            href="lats.html#lat"
+                            target="_blank"
+                            shape="poly"
+                            name="lats"
+                            coords="575,206,577,228,580,251,582,266,586,281,587,299,585,315,602,311,610,304,616,293,617,281,617,272,621,263,626,258,632,254,640,251,647,253,653,256,659,261,663,269,665,280,666,290,669,299,677,310,686,313,697,316,695,295,695,284,698,266,702,251,702,241,705,227,707,208,694,211,679,202,670,201,663,212,656,224,650,235,641,251,634,240,628,228,623,218,618,208,614,201,606,201,601,206,590,211"
+                          />
+                          <area
+                            href="lowerb.html#lowerb"
+                            target="_blank"
+                            shape="poly"
+                            name="lowerb"
+                            coords="605,313,612,314,618,317,624,320,630,323,634,327,640,339,645,332,650,324,656,319,663,317,669,315,676,312,671,304,666,293,664,284,664,275,662,268,658,259,651,255,645,252,637,252,628,256,622,262,616,275,616,288,614,299,609,305,605,311"
+                          />
+                          <area
+                            href="glutes.html#glute"
+                            target="_blank"
+                            shape="poly"
+                            name="glutes"
+                            coords="585,318,580,341,574,356,571,371,577,365,578,380,581,393,588,397,595,401,605,403,613,405,622,404,635,403,636,393,641,382,644,388,646,401,653,403,665,404,677,404,687,400,694,397,701,389,704,380,704,368,710,371,707,355,703,341,700,329,697,319,685,313,679,311,673,314,664,316,652,322,646,331,641,337,632,326,621,317,609,313,595,313"
+                          />
+                          <area
+                            href="hamstrings.html#hamstring"
+                            target="_blank"
+                            shape="poly"
+                            name="ham"
+                            coords="564,505,574,500,583,520,585,511,591,521,598,536,604,526,609,511,612,498,616,483,619,472,624,458,629,446,633,429,635,416,635,404,623,405,611,404,598,402,587,397,579,388,578,374,577,364,570,372,567,388,567,408,567,428,568,448,570,471,568,487"
+                          />
+                          <area
+                            href="hamstrings.html#hamstring"
+                            target="_blank"
+                            shape="poly"
+                            name="ham"
+                            coords="685,534,677,522,672,509,668,495,665,478,661,466,656,452,652,440,648,429,647,419,647,403,657,405,669,405,682,404,692,399,701,392,705,381,705,368,711,371,715,386,715,404,715,429,714,449,713,467,714,485,718,505,709,498,703,505,699,517,697,511"
+                          />
+                          <area
+                            href="calves.html#calf"
+                            target="_blank"
+                            shape="poly"
+                            name="calfb"
+                            coords="563,507,563,516,562,525,558,534,553,546,549,559,547,574,547,589,545,605,544,635,544,650,542,673,542,692,545,699,552,701,559,700,566,697,569,690,571,681,575,672,570,660,565,656,571,632,578,617,583,608,587,601,593,589,594,575,594,558,598,536,592,516,585,509,583,519,575,499,568,503"
+                          />
+                          <area
+                            href="calves.html#calf"
+                            target="_blank"
+                            shape="poly"
+                            name="calfb"
+                            coords="713,636,706,623,699,611,693,598,688,585,687,568,688,555,685,537,691,520,697,511,700,520,706,502,707,498,718,504,718,520,723,535,731,550,734,579,738,618,739,650,739,676,739,690,737,697,728,700,719,698,713,692,709,679,707,667,711,660,718,657"
+                          />
+                          <area
+                            href="triceps.html#tricep"
+                            target="_blank"
+                            shape="poly"
+                            name="tricepb"
+                            coords="533,229,539,211,543,200,550,195,557,190,564,188,569,187,572,197,574,205,577,216,574,227,572,237,567,248,560,258,553,267,543,266,543,258,547,244,547,235,544,233,539,238,538,247,537,257,533,266,528,257,528,244"
+                          />
+                          <area
+                            href="triceps.html#tricep"
+                            target="_blank"
+                            shape="poly"
+                            name="tricepb"
+                            coords="707,221,711,236,716,248,723,258,728,265,738,268,738,259,735,246,735,238,738,233,742,238,743,249,745,261,748,267,752,258,755,250,752,236,748,222,740,208,735,198,728,190,721,189,712,186,707,205"
+                          />
+                          <area
+                            href="forearms.html#forearm"
+                            target="_blank"
+                            shape="poly"
+                            name="forearmb"
+                            coords="485,355,491,342,494,328,498,312,504,296,512,280,519,271,527,256,533,269,536,263,537,251,540,241,544,232,548,240,545,249,543,261,543,268,551,268,551,280,544,297,532,315,520,332,510,351,505,359,493,360"
+                          />
+                          <area
+                            href="forearms.html#forearm"
+                            target="_blank"
+                            shape="poly"
+                            name="forearmb"
+                            coords="775,358,768,341,761,329,752,317,745,307,739,300,734,289,732,281,729,267,738,267,738,255,735,244,737,232,741,236,744,250,747,265,749,267,755,254,764,269,777,294,786,319,791,340,797,354,787,358"
+                          />
+                          <area
+                            href="delts.html#delt"
+                            target="_blank"
+                            shape="poly"
+                            name="deltb"
+                            coords=""
+                          />
+                          <area
+                            href="delts.html#delt"
+                            target="_blank"
+                            shape="poly"
+                            name="deltb"
+                            coords=""
+                          />
+                          
+                        </map>
+                        
+                      <h1 class="mt-3" id="bicep">Popular Bicep Exercises</h1>
+                      <div class="container">
+                        <div class="row">
+                      <h3 class="">Incline Dumbbell Curls</h3>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-4">
+                            <img class="img-fluid rounded" src="images/incline.gif">
+                          </div>
+                          <div class="col">
+                            <div class="card shadow mb-4">
+                              <div class="card-body p-5">
+                                  <h4 class="mb-4">Steps To Perform</h4>
+                                  <!-- Ordered list with custom style -->
+                                  <ol>
+                                    <li>Set up the incline bench at a 45-degree angle and sit with your back straight against it, feet firmly planted on the ground.</li>
+                                    <li>Hold a dumbbell in each hand with an underhand grip, arms fully extended. Curl one dumbbell upward while keeping your upper arm stationary, squeezing your bicep at the top.</li>
+                                    <li>Lower the dumbbell back down in a controlled manner and repeat the movement with the other arm, alternating between them for the desired number of repetitions.</li>
+                                  </ol>
+                              </div>
+                            </div>
+                              <div class="card shadow mb-4">
+                                <div class="card-body p-5">
+                                    <h4 class="mb-4">Mistakes To Avoid</h4>
+                                    <!-- Ordered list with custom style -->
+                                    <ul>
+                                      <li>Avoid swinging the weights by relying on your biceps and not using momentum to lift the dumbbells.</li>
+                                      <li>Keep your back straight against the bench and avoid arching or excessive leaning to maintain proper form and prevent strain on your lower back.</li>
+                                      <li>Ensure your shoulders remain relaxed and pulled back, avoiding shrugging or hunching, to keep tension on your biceps and avoid shifting the workload to other muscles.</li>
+                                    </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      <h3 class="mt-3">Machine Preacher Curl</h3>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-4">
+                            <img class="img-fluid rounded" src="images/demos/machpreach.gif">
+                          </div>
+                          <div class="col">
+                            <div class="card shadow mb-4">
+                              <div class="card-body p-5">
+                                  <h4 class="mb-4">Steps To Perform</h4>
+                                  <!-- Ordered list with custom style -->
+                                  <ol>
+                                    <li>Ensure that the seat, arm pad, and handles are properly positioned for your height.</li>
+                                    <li>Sit on the machine's seat with your back straight and firmly planted. Position your upper arms on the arm pad, ensuring your elbows are in line with the machine's pivot point. Grip the handles with an underhand grip (palms facing up).</li>
+                                    <li>Begin the movement by curling the handles upward, focusing on contracting your biceps. Keep your upper arms stationary throughout the exercise. Exhale as you curl up.</li>
+                                  </ol>
+                              </div>
+                            </div>
+                              <div class="card shadow mb-4">
+                                <div class="card-body p-5">
+                                    <h4 class="mb-4">Mistakes To Avoid</h4>
+                                    <!-- Ordered list with custom style -->
+                                    <ul>
+                                      <li>Avoid using excessive weight: Select a weight that allows you to maintain proper form and control. Using too much weight can compromise your technique and increase the risk of injury.</li>
+                                      <li>Keep your upper arms stationary: Ensure that only your forearms are moving during the exercise. Avoid any swinging or using your shoulders to lift the weight.</li>
+                                      <li>Maintain proper posture: Keep your back straight against the machine and avoid leaning or arching during the exercise. This helps to isolate the biceps and prevent strain on other muscle groups.</li>
+                                    </ul>
+                                </div>
+                              </div>
+                            </div>
+                              
+
+
+                        <h1 class="mt-3" id="chest">Popular Chest Exercises</h1>
+                        <h3 class="">Barbell Bench Press</h3>
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-4">
+                              <img class="img-fluid rounded" src="images/demos/bench.gif">
+                            </div>
+                            <div class="col">
+                              <div class="card shadow mb-4">
+                                <div class="card-body p-5">
+                                    <h4 class="mb-4">Steps To Perform</h4>
+                                    <!-- Ordered list with custom style -->
+                                    <ol>
+                                      <li>Set up the barbell: Position the barbell on the bench press rack at a suitable height. Load the bar with the desired weight plates.</li>
+                                      <li>Lie down on the bench with your feet firmly planted on the ground. Position your body so that the bar is directly above your eyes, with your eyes aligned with the bar. Maintain a slight arch in your lower back.</li>
+                                      <li>Grip the bar slightly wider than shoulder-width apart, with an overhand grip. Unrack the bar by straightening your arms and lifting it off the rack. Lower the bar slowly until it touches your mid to lower chest while maintaining the slight arch in your back.</li>
+                                      <li>Once you have completed your desired number of repetitions, safely rack the barbell back on the rack.</li>
+                                    </ol>
+                                </div>
+                              </div>
+                                <div class="card shadow mb-4">
+                                  <div class="card-body p-5">
+                                      <h4 class="mb-4">Mistakes To Avoid</h4>
+                                      <!-- Ordered list with custom style -->
+                                      <ul>
+                                        <li>Maintain a slight natural arch in your lower back, but avoid excessive arching, as it can strain your lower back and compromise stability.</li>
+                                        <li>Keep your elbows at a 45-degree angle from your body to maintain proper positioning. Flaring your elbows too wide can increase the risk of shoulder discomfort or injury.</li>
+                                        <li>Lower the bar in a controlled manner, ensuring it touches your chest under control. Avoid bouncing the bar off your chest, as it can reduce muscle engagement and increase the risk of injury.</li>
+                                      </ul>
+                                  </div>
+                                </div>
+                              </div>
+                      <h3 class="mt-3">Incline Dumbbell Press</h3>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-4">
+                            <img class="img-fluid rounded" src="images/demos/inclineb.gif">
+                          </div>
+                          <div class="col">
+                            <div class="card shadow mb-4">
+                              <div class="card-body p-5">
+                                  <h4 class="mb-4">Steps To Perform</h4>
+                                  <!-- Ordered list with custom style -->
+                                  <ol>
+                                    <li>Adjust the incline bench to a suitable angle, typically around 45 degrees. Ensure the bench is stable and secure.</li>
+                                    <li>Sit on the incline bench with your back pressed against the backrest and your feet firmly planted on the ground. Hold a dumbbell in each hand, resting them on your thighs.</li>
+                                    <li>With a neutral grip (palms facing each other), use your thighs to help lift the dumbbells one at a time up to shoulder level. While keeping your wrists aligned with your elbows, slowly press the dumbbells upward, extending your arms fully.</li>
+                                    <li>In a controlled manner, lower the dumbbells back to the starting position by bending your elbows and allowing your upper arms to reach a slightly lower position than parallel to the ground.</li>
+                                  </ol>
+                              </div>
+                            </div>
+                              <div class="card shadow mb-4">
+                                <div class="card-body p-5">
+                                    <h4 class="mb-4">Mistakes To Avoid</h4>
+                                    <!-- Ordered list with custom style -->
+                                    <ul>
+                                      <li>Using excessive weight: Choose dumbbells that allow you to maintain proper form and control throughout the exercise. Using weights that are too heavy can compromise your technique and increase the risk of injury.</li>
+                                      <li>Flaring your elbows out too wide: Keep your elbows at a moderate angle rather than letting them flare out excessively. This helps to maintain proper alignment and prevents unnecessary strain on your shoulders.</li>
+                                    </ul>
+                                </div>
+                              </div>
+                            </div>
+                      <h3 class="mt-3">Bodyweight Dip</h3>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-4">
+                            <img class="img-fluid rounded" src="images/demos/chestdips.gif">
+                          </div>
+                          <div class="col">
+                            <div class="card shadow mb-4">
+                              <div class="card-body p-5">
+                                  <h4 class="mb-4">Steps To Perform</h4>
+                                  <!-- Ordered list with custom style -->
+                                  <ol>
+                                    <li> Stand between the bars and grip each bar firmly with your palms facing inward. Lift yourself up, supporting your body weight on your extended arms, and lean slightly forward.</li>
+                                    <li>Lower your body by bending your elbows and leaning forward until your shoulders are below your elbows or until you feel a stretch in your chest muscles. Push yourself back up by straightening your arms, returning to the starting position.</li>
+                                  </ol>
+                              </div>
+                            </div>
+                              <div class="card shadow mb-4">
+                                <div class="card-body p-5">
+                                    <h4 class="mb-4">Mistakes To Avoid</h4>
+                                    <!-- Ordered list with custom style -->
+                                    <ul>
+                                      <li>Swinging or using momentum: Avoid using momentum to perform the dips. Focus on controlled movements, engaging your chest and triceps throughout the exercise..</li>
+                                      <li>Leaning too far forward or backward: Maintain a slight forward lean while performing the dips, but avoid leaning excessively forward or backward. This helps target the chest muscles effectively and maintains proper form.</li>
+                                      <li>Allowing your shoulders to shrug: Keep your shoulders relaxed and pulled down throughout the exercise. Shrug or hunching your shoulders can shift the focus away from your chest and lead to improper form.</li>
+                                    </ul>
+                                </div>
+                              </div>
+                            </div>
+                      <h3 class="mt-3">Chest Press</h3>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-4">
+                            <img class="img-fluid rounded" src="images/demos/chestpress.gif">
+                          </div>
+                          <div class="col">
+                            <div class="card shadow mb-4">
+                              <div class="card-body p-5">
+                                  <h4 class="mb-4">Steps To Perform</h4>
+                                  <!-- Ordered list with custom style -->
+                                  <ol>
+                                    <li> Sit on the machine with your back firmly against the backrest and your feet flat on the footrests. Grip the handles or grips with your palms facing forward and your elbows at approximately 90 degrees.</li>
+                                    <li>Push the handles or grips forward by extending your arms in a controlled manner until your arms are almost fully extended, but without locking your elbows.</li>
+                                    <li>Pause briefly, and then slowly reverse the movement to return to the starting position.</li>
+                                  </ol>
+                              </div>
+                            </div>
+                              <div class="card shadow mb-4">
+                                <div class="card-body p-5">
+                                    <h4 class="mb-4">Mistakes To Avoid</h4>
+                                    <!-- Ordered list with custom style -->
+                                    <ul>
+                                      <li>Jerking or using momentum: Avoid using jerking movements or relying on momentum to push the weight. Focus on a smooth and controlled motion, engaging your chest muscles throughout.</li>
+                                      <li>Allowing your shoulders to hunch: Keep your shoulders down and back, avoiding shrugging or hunching forward. This helps maintain proper posture and ensures that the chest muscles are effectively targeted.</li>
+                                    </ul>
+                                </div>
+                              </div>
+                          </div>
+                    
+                          
+                              
+
+
+                      <h1 class="mt-3" id="tricep">Popular Tricep Exercises</h1>
+                          <h3 class="">Tricep Cable Extensions</h3>
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-4">
+                                <img class="img-fluid rounded" src="images/demos/tricepdown.gif">
+                              </div>
+                              <div class="col">
+                                <div class="card shadow mb-4">
+                                  <div class="card-body p-5">
+                                      <h4 class="mb-4">Steps To Perform</h4>
+                                      <!-- Ordered list with custom style -->
+                                      <ol>
+                                        <li>Stand to the side of a cable machine and place your elbow in a fixed position.</li>
+                                        <li>Keeping your upper arms close to your sides and your elbows stationary, exhale and push the bar or rope downward until your arms are fully extended. Pause briefly at the bottom of the movement, focusing on contracting your triceps.</li>
+                                        <li>In a controlled manner, allow the bar or rope to rise back up, bending your elbows and allowing your forearms to move upward until your hands reach chest level.</li>
+                                      </ol>
+                                  </div>
+                                </div>
+                                  <div class="card shadow mb-4">
+                                    <div class="card-body p-5">
+                                        <h4 class="mb-4">Mistakes To Avoid</h4>
+                                        <!-- Ordered list with custom style -->
+                                        <ul>
+                                          <li>Avoid swinging your arm and focus on the mind-muscle connection of your tricep.</li>
+                                          <li>Keep your elbow in place to ensure that other muscles aren't engaged from swinging the weight.</li>
+                                        </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                          <h3 class="mt-3">Overhead Cable Extensions</h3>
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-4">
+                                <img class="img-fluid rounded" src="images/demos/triceppull.gif">
+                              </div>
+                              <div class="col">
+                                <div class="card shadow mb-4">
+                                  <div class="card-body p-5">
+                                      <h4 class="mb-4">Steps To Perform</h4>
+                                      <!-- Ordered list with custom style -->
+                                      <ol>
+                                        <li>Start by standing upright with a cable placed in your hands.</li>
+                                        <li>Hold the weight with one hands, positioning it directly above your head with your arms fully extended.</li>
+                                        <li>Keeping your upper arms close to your head and your elbow stationary, slowly lower the weight behind your head by bending your elbow.</li>
+                                        <li>Once your forearm is parallel the floor or slightly lower, pause for a moment, then extend your arm back up to the starting position by contracting your tricep.</li>
+                                      </ol>
+                                  </div>
+                                </div>
+                                  <div class="card shadow mb-4">
+                                    <div class="card-body p-5">
+                                        <h4 class="mb-4">Mistakes To Avoid</h4>
+                                        <!-- Ordered list with custom style -->
+                                        <ul>
+                                          <li>Swinging the arms: Maintain control throughout the exercise and avoid swinging the arms or using momentum to lift the weight. The movement should be slow and controlled, focusing on the triceps..</li>
+                                          <li>Not maintaining a full range of motion: Make sure to lower the weight behind your head until your forearms are parallel to the floor or slightly lower. Avoid cutting the range of motion short, as it limits the activation of the triceps and reduces the overall effectiveness of the exercise.</li>
+                                        </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                          <h1 class="mt-3" id="quad">Popular Quad Exercises</h1>
+                          <h3 class="">Barbell Squat</h3>
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-4">
+                                <img class="img-fluid rounded" src="images/demos/squat.gif">
+                              </div>
+                              <div class="col">
+                                <div class="card shadow mb-4">
+                                  <div class="card-body p-5">
+                                      <h4 class="mb-4">Steps To Perform</h4>
+                                      <!-- Ordered list with custom style -->
+                                      <ol>
+                                        <li>Begin by standing with your feet shoulder-width apart and position the barbell across your upper back, resting it on your traps and shoulders. Grasp the barbell with an overhand grip slightly wider than shoulder-width apart.</li>
+                                        <li>Keeping your head up, chest lifted, and core engaged, initiate the movement by bending at the knees and hips simultaneously, as if sitting back into a chair. Ensure that your knees track in line with your toes.</li>
+                                        <li>Continue descending until your thighs are parallel to the floor or slightly below, while maintaining a neutral spine and keeping your heels planted on the ground.</li>
+                                        <li>Reverse the movement by driving through your heels and extending your knees and hips, returning to the starting position.</li>
+                                        <li>Repeat the squat for the desired number of repetitions, maintaining proper form and control throughout.</li>
+                                      </ol>
+                                  </div>
+                                </div>
+                                  <div class="card shadow mb-4">
+                                    <div class="card-body p-5">
+                                        <h4 class="mb-4">Mistakes To Avoid</h4>
+                                        <!-- Ordered list with custom style -->
+                                        <ul>
+                                          <li>Poor form: Maintain proper form throughout the squat. Avoid rounding your back, leaning too far forward, or allowing your knees to cave inwards. Keep your core tight, chest lifted, and knees tracking in line with your toes.</li>
+                                          <li>Insufficient depth: Aim to squat to at least parallel, where your thighs are parallel to the floor. Failing to reach adequate depth limits the engagement of key muscle groups and reduces the effectiveness of the exercise.</li>
+                                        </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              </div>
+
+                          
+
+                          <h3 class="">Leg Press</h3>
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-4">
+                                <img class="img-fluid rounded" src="images/demos/legpress.gif">
+                              </div>
+                              <div class="col">
+                                <div class="card shadow mb-4">
+                                  <div class="card-body p-5">
+                                      <h4 class="mb-4">Steps To Perform</h4>
+                                      <!-- Ordered list with custom style -->
+                                      <ol>
+                                        <li>Set the appropriate weight for your fitness level and adjust the seat position so that your knees are at a 90-degree angle when your feet are on the footplate.</li>
+                                        <li>Sit on the leg press machine with your back flat against the seat and your feet shoulder-width apart on the footplate. Ensure that your feet are flat and your knees are aligned with your toes.</li>
+                                        <li>Push against the footplate to extend your legs, straightening them fully without locking your knees. Slowly lower the weight by bending your knees until they reach a 90-degree angle again, and repeat for the desired number of repetitions.</li>
+                                      </ol>
+                                  </div>
+                                </div>
+                                  <div class="card shadow mb-4">
+                                    <div class="card-body p-5">
+                                        <h4 class="mb-4">Mistakes To Avoid</h4>
+                                        <!-- Ordered list with custom style -->
+                                        <ul>
+                                          <li>Lifting your hips off the seat: Keep your back firmly against the seat throughout the exercise. Lifting your hips off the seat can put undue stress on your lower back and decrease the effectiveness of the leg press.</li>
+                                          <li>Locking your knees: While it's important to fully extend your legs during the leg press, avoid locking your knees at the top of the movement. Locking the knees can strain the joint and increase the risk of injury. Maintain a slight bend in your knees to keep tension on the muscles and protect your joints.</li>
+                                        </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                          <h3 class="">Hack Squats</h3>
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-4">
+                                <img class="img-fluid rounded" src="images/demos/hacksquat.gif">
+                              </div>
+                              <div class="col">
+                                <div class="card shadow mb-4">
+                                  <div class="card-body p-5">
+                                      <h4 class="mb-4">Steps To Perform</h4>
+                                      <!-- Ordered list with custom style -->
+                                      <ol>
+                                        <li>Position yourself on the hack squat machine with your back against the backrest and your feet shoulder-width apart on the foot platform. Adjust the shoulder pads to a comfortable position that allows you to maintain proper alignment.</li>
+                                        <li>Bend your knees slightly and release the safety handles or handles on the sides of the machine. Maintain an upright posture with your chest lifted, core engaged, and gaze forward.</li>
+                                        <li>Begin the movement by lowering your body down, bending your knees and hips simultaneously. Keep your back straight and descend until your thighs are parallel to the floor or slightly below. Push through your heels and extend your legs to return to the starting position. Repeat for the desired number of repetitions.</li>
+                                      </ol>
+                                  </div>
+                                </div>
+                                  <div class="card shadow mb-4">
+                                    <div class="card-body p-5">
+                                        <h4 class="mb-4">Mistakes To Avoid</h4>
+                                        <!-- Ordered list with custom style -->
+                                        <ul>
+                                          <li>A narrow hack squat will put more stress on the knees.</li>
+                                          <li>An excessively wide stance might strain your adductors or make your knees cave inwards, possibly hurting them.</li>
+                                        </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                        <h1 class="mt-3" id="hamstring">Popular Hamstring Exercises</h1>
+                            <h3 class="">Barbell Squat</h3>
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-4">
+                                  <img class="img-fluid rounded" src="images/demos/squat.gif">
+                                </div>
+                                <div class="col">
+                                  <div class="card shadow mb-4">
+                                    <div class="card-body p-5">
+                                        <h4 class="mb-4">Steps To Perform</h4>
+                                        <!-- Ordered list with custom style -->
+                                        <ol>
+                                          <li>Begin by standing with your feet shoulder-width apart and position the barbell across your upper back, resting it on your traps and shoulders. Grasp the barbell with an overhand grip slightly wider than shoulder-width apart.</li>
+                                          <li>Keeping your head up, chest lifted, and core engaged, initiate the movement by bending at the knees and hips simultaneously, as if sitting back into a chair. Ensure that your knees track in line with your toes.</li>
+                                          <li>Continue descending until your thighs are parallel to the floor or slightly below, while maintaining a neutral spine and keeping your heels planted on the ground.</li>
+                                          <li>Reverse the movement by driving through your heels and extending your knees and hips, returning to the starting position.</li>
+                                          <li>Repeat the squat for the desired number of repetitions, maintaining proper form and control throughout.</li>
+                                        </ol>
+                                    </div>
+                                  </div>
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Mistakes To Avoid</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ul>
+                                            <li>Poor form: Maintain proper form throughout the squat. Avoid rounding your back, leaning too far forward, or allowing your knees to cave inwards. Keep your core tight, chest lifted, and knees tracking in line with your toes.</li>
+                                            <li>Insufficient depth: Aim to squat to at least parallel, where your thighs are parallel to the floor. Failing to reach adequate depth limits the engagement of key muscle groups and reduces the effectiveness of the exercise.</li>
+                                          </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                            <h3 class="">Seated Hamstring Curl</h3>
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-4">
+                                  <img class="img-fluid rounded" src="images/demos/hamcurl.gif">
+                                </div>
+                                <div class="col">
+                                  <div class="card shadow mb-4">
+                                    <div class="card-body p-5">
+                                        <h4 class="mb-4">Steps To Perform</h4>
+                                        <!-- Ordered list with custom style -->
+                                        <ol>
+                                          <li>Set the appropriate weight for your fitness level and adjust the machine's leg pad so that it rests comfortably on the back of your lower legs, just above your ankles.</li>
+                                          <li>Sit on the seated hamstring curl machine with your back against the backrest and your legs extended in front of you. Place your feet against the footpad, ensuring that your knees are aligned with the machine's axis.</li>
+                                          <li>Contract your hamstrings to curl your lower legs towards your buttocks while keeping your upper legs stationary. Hold the contraction for a moment, then slowly lower the weight by extending your legs until they are fully straightened, and repeat for the desired number of repetitions.</li>
+                                        </ol>
+                                    </div>
+                                  </div>
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Mistakes To Avoid</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ul>
+                                            <li>Using momentum: Avoid swinging or jerking your legs during the exercise. Keep the movement controlled and focus on using your hamstrings to curl the weight rather than relying on momentum.</li>
+                                            <li>Arching your back: Maintain proper posture throughout the exercise by keeping your back against the backrest. Arching your back can shift the emphasis away from the hamstrings and strain your lower back.</li>
+                                            <li>Lifting your hips off the seat: Keep your hips firmly pressed against the seat throughout the movement. Lifting your hips can reduce the engagement of the hamstrings and potentially lead to incorrect form and reduced effectiveness of the exercise.</li>
+                                          </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                </div>
+
+
+                          <h3 class="">Hip Thrust</h3>
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-4">
+                                  <img class="img-fluid rounded" src="images/demos/booty.gif">
+                                </div>
+                                <div class="col">
+                                  <div class="card shadow mb-4">
+                                    <div class="card-body p-5">
+                                        <h4 class="mb-4">Steps To Perform</h4>
+                                        <!-- Ordered list with custom style -->
+                                        <ol>
+                                          <li>Position a barbell or a padded weight across your hips and adjust it to a comfortable weight. Place a bench or step horizontally behind you, with your upper back resting against it.</li>
+                                          <li>Sit on the ground with your upper back against the bench and your feet planted firmly on the floor, hip-width apart. </li>
+                                          <li>Drive your heels into the ground and engage your glutes and hamstrings to lift your hips off the ground until your body forms a straight line from your knees to your shoulders. Squeeze your glutes at the top of the movement, hold for a moment, and then lower your hips back down to the starting position in a controlled manner. Repeat for the desired number of repetitions.
+                                          </li>
+                                        </ol>
+                                    </div>
+                                  </div>
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Mistakes To Avoid</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ul>
+                                            <li>Relying on your lower back: Focus on using your glutes and hamstrings to lift your hips, rather than relying on your lower back. Avoid overarching your lower back and maintain a neutral spine throughout the movement to protect your back.</li>
+                                            <li>Not fully extending your hips: Ensure that you fully extend your hips at the top of the movement to maximize glute activation. Squeeze your glutes at the top and avoid stopping short of full hip extension.</li>
+                                          </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                            <h3 class="">Romanian Deadlift</h3>
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-4">
+                                  <img class="img-fluid rounded" src="images/demos/romanian.gif">
+                                </div>
+                                <div class="col">
+                                  <div class="card shadow mb-4">
+                                    <div class="card-body p-5">
+                                        <h4 class="mb-4">Steps To Perform</h4>
+                                        <!-- Ordered list with custom style -->
+                                        <ol>
+                                          <li>Stand with your feet hip-width apart and hold a barbell or dumbbells in front of your thighs</li>
+                                          <li>Keeping your back straight and core engaged, hinge at the hips and push your buttocks back as you lower the weight towards the floor. Keep a slight bend in your knees, but the movement primarily occurs in the hips. Lower the weight until you feel a stretch in your hamstrings while maintaining a neutral spine.</li>
+                                          <li>Engage your hamstrings and glutes to raise your upper body back up, pushing your hips forward and straightening your knees. Maintain control throughout the movement and avoid using momentum.</li>
+                                        </ol>
+                                    </div>
+                                  </div>
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Mistakes To Avoid</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ul>
+                                            <li>Rounding your back: Maintain a neutral spine throughout the exercise. Avoid rounding your back or allowing it to arch excessively, as this can increase the risk of injury. Focus on keeping your core engaged and your back straight.</li>
+                                            <li>Allowing the knees to bend excessively: While there should be a slight bend in your knees during Romanian deadlifts, avoid allowing them to bend excessively. The primary movement should occur in the hips, with the knees serving as a hinge. Over-bending the knees can shift the emphasis away from the hamstrings and reduce the effectiveness of the exercise.</li>
+                                          </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                            <h3 class="">Deadlift</h3>
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-4">
+                                  <img class="img-fluid rounded" src="images/demos/deadlift2.gif">
+                                </div>
+                                <div class="col">
+                                  <div class="card shadow mb-4">
+                                    <div class="card-body p-5">
+                                        <h4 class="mb-4">Steps To Perform</h4>
+                                        <!-- Ordered list with custom style -->
+                                        <ol>
+                                          <li>Place the barbell on the ground in front of you with the weight evenly distributed. Position your feet hip-width apart, toes pointing forward or slightly outward. Bend your knees and hinge at the hips to grip the barbell with an overhand grip or a mixed grip (one hand overhand, one hand underhand).</li>
+                                          <li>With your back straight, engage your core, and lift your chest. Keep your shoulders back and down. Your arms should be fully extended and hanging perpendicular to the ground. Ensure that your weight is balanced evenly over your feet.</li>
+                                          <li>Initiate the movement by driving through your heels, extending your hips and knees simultaneously to lift the barbell off the ground. Keep your back straight and maintain a neutral spine throughout the lift. Stand tall with your shoulders back and squeeze your glutes at the top of the movement. Lower the barbell back to the ground by reversing the movement, hinging at the hips and bending your knees. Repeat for the desired number of repetitions.</li>
+                                        </ol>
+                                    </div>
+                                  </div>
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Mistakes To Avoid</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ul>
+                                            <li>Rounded back: Maintain a neutral spine throughout the lift and avoid rounding your back. This can lead to increased stress on your spine and increase the risk of injury. Focus on keeping your chest lifted and your back straight throughout the movement.</li>
+                                            <li>Lifting with your back instead of your legs: Engage your leg muscles, particularly your hamstrings and glutes, to drive the movement. Avoid relying solely on your back muscles to lift the weight. Push through your heels and use the power of your lower body to lift the barbell.</li>
+                                          </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                          <h3 class="">Hack Squats</h3>
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-4">
+                                <img class="img-fluid rounded" src="images/demos/hacksquat.gif">
+                              </div>
+                              <div class="col">
+                                <div class="card shadow mb-4">
+                                  <div class="card-body p-5">
+                                      <h4 class="mb-4">Steps To Perform</h4>
+                                      <!-- Ordered list with custom style -->
+                                      <ol>
+                                        <li>Position yourself on the hack squat machine with your back against the backrest and your feet shoulder-width apart on the foot platform. Adjust the shoulder pads to a comfortable position that allows you to maintain proper alignment.</li>
+                                        <li>Bend your knees slightly and release the safety handles or handles on the sides of the machine. Maintain an upright posture with your chest lifted, core engaged, and gaze forward.</li>
+                                        <li>Begin the movement by lowering your body down, bending your knees and hips simultaneously. Keep your back straight and descend until your thighs are parallel to the floor or slightly below. Push through your heels and extend your legs to return to the starting position. Repeat for the desired number of repetitions.</li>
+                                      </ol>
+                                  </div>
+                                </div>
+                                  <div class="card shadow mb-4">
+                                    <div class="card-body p-5">
+                                        <h4 class="mb-4">Mistakes To Avoid</h4>
+                                        <!-- Ordered list with custom style -->
+                                        <ul>
+                                          <li>A narrow hack squat will put more stress on the knees.</li>
+                                          <li>An excessively wide stance might strain your adductors or make your knees cave inwards, possibly hurting them.</li>
+                                        </ul>
+                                    </div>
+                                  </div>
+                                </div>
+
+                            <h1 class="mt-3" id="glute">Popular Glute Exercises</h1>
+                            <h3 class="">Hip Thrust</h3>
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-4">
+                                  <img class="img-fluid rounded" src="images/demos/booty.gif">
+                                </div>
+                                <div class="col">
+                                  <div class="card shadow mb-4">
+                                    <div class="card-body p-5">
+                                        <h4 class="mb-4">Steps To Perform</h4>
+                                        <!-- Ordered list with custom style -->
+                                        <ol>
+                                          <li>Position a barbell or a padded weight across your hips and adjust it to a comfortable weight. Place a bench or step horizontally behind you, with your upper back resting against it.</li>
+                                          <li>Sit on the ground with your upper back against the bench and your feet planted firmly on the floor, hip-width apart. </li>
+                                          <li>Drive your heels into the ground and engage your glutes and hamstrings to lift your hips off the ground until your body forms a straight line from your knees to your shoulders. Squeeze your glutes at the top of the movement, hold for a moment, and then lower your hips back down to the starting position in a controlled manner. Repeat for the desired number of repetitions.
+                                          </li>
+                                        </ol>
+                                    </div>
+                                  </div>
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Mistakes To Avoid</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ul>
+                                            <li>Relying on your lower back: Focus on using your glutes and hamstrings to lift your hips, rather than relying on your lower back. Avoid overarching your lower back and maintain a neutral spine throughout the movement to protect your back.</li>
+                                            <li>Not fully extending your hips: Ensure that you fully extend your hips at the top of the movement to maximize glute activation. Squeeze your glutes at the top and avoid stopping short of full hip extension.</li>
+                                          </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                          <h3 class="">Barbell Squat</h3>
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-4">
+                                <img class="img-fluid rounded" src="images/demos/squat.gif">
+                              </div>
+                              <div class="col">
+                                <div class="card shadow mb-4">
+                                  <div class="card-body p-5">
+                                      <h4 class="mb-4">Steps To Perform</h4>
+                                      <!-- Ordered list with custom style -->
+                                      <ol>
+                                        <li>Begin by standing with your feet shoulder-width apart and position the barbell across your upper back, resting it on your traps and shoulders. Grasp the barbell with an overhand grip slightly wider than shoulder-width apart.</li>
+                                        <li>Keeping your head up, chest lifted, and core engaged, initiate the movement by bending at the knees and hips simultaneously, as if sitting back into a chair. Ensure that your knees track in line with your toes.</li>
+                                        <li>Continue descending until your thighs are parallel to the floor or slightly below, while maintaining a neutral spine and keeping your heels planted on the ground.</li>
+                                        <li>Reverse the movement by driving through your heels and extending your knees and hips, returning to the starting position.</li>
+                                        <li>Repeat the squat for the desired number of repetitions, maintaining proper form and control throughout.</li>
+                                      </ol>
+                                  </div>
+                                </div>
+                                  <div class="card shadow mb-4">
+                                    <div class="card-body p-5">
+                                        <h4 class="mb-4">Mistakes To Avoid</h4>
+                                        <!-- Ordered list with custom style -->
+                                        <ul>
+                                          <li>Poor form: Maintain proper form throughout the squat. Avoid rounding your back, leaning too far forward, or allowing your knees to cave inwards. Keep your core tight, chest lifted, and knees tracking in line with your toes.</li>
+                                          <li>Insufficient depth: Aim to squat to at least parallel, where your thighs are parallel to the floor. Failing to reach adequate depth limits the engagement of key muscle groups and reduces the effectiveness of the exercise.</li>
+                                        </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              </div>
+                          <h3 class="">Hack Squats</h3>
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-4">
+                                <img class="img-fluid rounded" src="images/demos/hacksquat.gif">
+                              </div>
+                              <div class="col">
+                                <div class="card shadow mb-4">
+                                  <div class="card-body p-5">
+                                      <h4 class="mb-4">Steps To Perform</h4>
+                                      <!-- Ordered list with custom style -->
+                                      <ol>
+                                        <li>Position yourself on the hack squat machine with your back against the backrest and your feet shoulder-width apart on the foot platform. Adjust the shoulder pads to a comfortable position that allows you to maintain proper alignment.</li>
+                                        <li>Bend your knees slightly and release the safety handles or handles on the sides of the machine. Maintain an upright posture with your chest lifted, core engaged, and gaze forward.</li>
+                                        <li>Begin the movement by lowering your body down, bending your knees and hips simultaneously. Keep your back straight and descend until your thighs are parallel to the floor or slightly below. Push through your heels and extend your legs to return to the starting position. Repeat for the desired number of repetitions.</li>
+                                      </ol>
+                                  </div>
+                                </div>
+                                  <div class="card shadow mb-4">
+                                    <div class="card-body p-5">
+                                        <h4 class="mb-4">Mistakes To Avoid</h4>
+                                        <!-- Ordered list with custom style -->
+                                        <ul>
+                                          <li>A narrow hack squat will put more stress on the knees.</li>
+                                          <li>An excessively wide stance might strain your adductors or make your knees cave inwards, possibly hurting them.</li>
+                                        </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                            <h1 class="mt-3" id="calf">Popular Calf Exercises</h1>
+                            <h3 class="">Seated Calf Raises</h3>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-4">
+                                    <img class="img-fluid rounded" src="images/demos/seatcalf.gif">
+                                  </div>
+                                  <div class="col">
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Steps To Perform</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ol>
+                                            <li>Sit on a seated calf raise machine and adjust the padded lever so that it rests comfortably on your thighs, just above your knees.</li>
+                                            <li>Place the balls of your feet on the foot platform, allowing your heels to hang off the edge. Ensure that your knees are slightly bent and your upper body is upright, with your hands holding the handles for support.</li>
+                                            <li>Push through the balls of your feet to raise your heels as high as possible, contracting your calf muscles. Hold the contraction for a moment, then slowly lower your heels back down until they are below the foot platform, feeling a stretch in your calf muscles. Repeat for the desired number of repetitions.</li>
+                                          </ol>
+                                      </div>
+                                    </div>
+                                      <div class="card shadow mb-4">
+                                        <div class="card-body p-5">
+                                            <h4 class="mb-4">Mistakes To Avoid</h4>
+                                            <!-- Ordered list with custom style -->
+                                            <ul>
+                                              <li>Using momentum: Avoid using momentum or bouncing your heels to lift the weight. Focus on a slow and controlled movement, fully contracting and extending your calf muscles with each repetition.</li>
+                                              <li>Neglecting full range of motion: Ensure that you perform a full range of motion during seated calf raises. Lower your heels below the foot platform to fully stretch your calf muscles, and raise your heels as high as possible to fully contract them. Avoid shortening the movement or limiting your range of motion, as this can limit the benefits of the exercise.</li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                              <h3 class="">Standing Calf Raises</h3>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-4">
+                                    <img class="img-fluid rounded" src="images/demos/standingcalf.gif">
+                                  </div>
+                                  <div class="col">
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Steps To Perform</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ol>
+                                            <li>Position yourself on a raised platform or calf raise machine with the balls of your feet on the edge and your heels hanging off. Maintain a shoulder-width stance and place your hands on a support for balance if needed.</li>
+                                            <li>Rise up onto your toes by contracting your calf muscles, lifting your body upward. Keep your legs straight or with a slight bend at the knees. Hold the top position briefly, focusing on the contraction in your calves.</li>
+                                            <li>Lower your heels down, allowing them to drop below the level of the platform or machine until you feel a stretch in your calf muscles.</li>
+                                          </ol>
+                                      </div>
+                                    </div>
+                                      <div class="card shadow mb-4">
+                                        <div class="card-body p-5">
+                                            <h4 class="mb-4">Mistakes To Avoid</h4>
+                                            <!-- Ordered list with custom style -->
+                                            <ul>
+                                              <li>Bouncing or jerking movements: Avoid using momentum or quick bouncing movements to raise your heels. Instead, focus on a slow and controlled motion, emphasizing the contraction in your calf muscles.</li>
+                                              <li>Letting your knees cave in: Keep your knees in line with your toes throughout the exercise. Avoid allowing your knees to collapse inward, as this can place strain on your joints and reduce the effectiveness of the exercise.</li>
+                                              <li>Using excessive weight: Use an appropriate weight or resistance level that allows you to maintain proper form and control. Using too much weight can compromise your technique and increase the risk of injury.</li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                            <h1 class="mt-3" id="delt">Popular Delt Exercises</h1>
+                            <h3 class="">Cable Lateral Raises</h3>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-4">
+                                    <img class="img-fluid rounded" src="images/demos/deltraise.gif">
+                                  </div>
+                                  <div class="col">
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Steps To Perform</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ol>
+                                            <li>Attach a D-handle or single handle to the low pulley of the cable machine. </li>
+                                            <li>Stand sideways to the cable machine with your feet shoulder-width apart. Grasp the handle with the hand opposite to the machine, with your arm extended down and your palm facing your body.</li>
+                                            <li>Keeping your arm straight or with a slight bend at the elbow, exhale and raise the handle out to the side, away from your body, until your arm is parallel to the ground. Focus on engaging your side deltoid muscles. Pause briefly at the top of the movement, maintaining control.</li>
+                                            <li>In a controlled manner, lower the handle back down to the starting position, allowing your arm to return to the extended down position.</li>
+                                          </ol>
+                                      </div>
+                                    </div>
+                                      <div class="card shadow mb-4">
+                                        <div class="card-body p-5">
+                                            <h4 class="mb-4">Mistakes To Avoid</h4>
+                                            <!-- Ordered list with custom style -->
+                                            <ul>
+                                              <li>Leaning or twisting: Keep your body upright and avoid leaning or twisting your torso during the exercise. This ensures that you are isolating and targeting the desired muscles effectively.</li>
+                                              <li>Using momentum or swinging: Avoid using momentum or swinging your body to lift the weight. Focus on a controlled and deliberate movement, emphasizing the contraction in your side deltoid muscles.</li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                              <h3 class="">Rope Face Pulls</h3>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-4">
+                                    <img class="img-fluid rounded" src="images/demos/facepull2.gif">
+                                  </div>
+                                  <div class="col">
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Steps To Perform</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ol>
+                                            <li>Attach a rope or a double-handled attachment to the high pulley of a cable machine. Adjust the pulley height to chest level or slightly above.</li>
+                                            <li>Stand facing the cable machine with your feet shoulder-width apart. Grab the handles with an overhand grip and step back to create tension on the cable. Take a slight step forward to position your body at a slight angle.</li>
+                                            <li>Keeping your chest lifted and core engaged, retract your shoulder blades and pull the handles toward your face, aiming to bring them to the sides of your head. Focus on squeezing your upper back muscles. Pause briefly at the fully contracted position, then slowly and under control, extend your arms to return to the starting position. Repeat for the desired number of repetitions.</li>
+                                          </ol>
+                                      </div>
+                                    </div>
+                                      <div class="card shadow mb-4">
+                                        <div class="card-body p-5">
+                                            <h4 class="mb-4">Mistakes To Avoid</h4>
+                                            <!-- Ordered list with custom style -->
+                                            <ul>
+                                              <li>Maintain proper posture throughout the movement. Keep your shoulders down and avoid shrugging them up towards your ears. Focus on using your upper back muscles to initiate and perform the exercise. Avoid relying on your traps or other muscles to perform the movement.</li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                            <h1 class="mt-3" id="ab">Popular Ab Exercises</h1>
+                            <h3 class="">Hanging Leg Raises</h3>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-4">
+                                    <img class="img-fluid rounded" src="images/demos/abraise.gif">
+                                  </div>
+                                  <div class="col">
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Steps To Perform</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ol>
+                                            <li>Grip the bar with an overhand grip, slightly wider than shoulder-width apart. Allow your body to hang freely, with your arms fully extended and your legs straight down.</li>
+                                            <li>Engage your core muscles and exhale as you raise your legs upward, keeping them straight, until they are parallel to the ground or as high as you can comfortably lift them. Focus on using your abdominal muscles to initiate and control the movement.</li>
+                                            <li>In a controlled manner, lower your legs back down to the starting position, maintaining tension in your core muscles throughout the exercise.</li>
+                                          </ol>
+                                      </div>
+                                    </div>
+                                      <div class="card shadow mb-4">
+                                        <div class="card-body p-5">
+                                            <h4 class="mb-4">Mistakes To Avoid</h4>
+                                            <!-- Ordered list with custom style -->
+                                            <ul>
+                                              <li>Over-relying on hip flexors: One common mistake is relying too much on the hip flexor muscles instead of the abdominal muscles. This can happen when you use excessive swinging or momentum to lift your legs, allowing the hips to do most of the work. Instead, focus on engaging your core and using your abdominal muscles to initiate the movement.</li>
+                                              <li>Using momentum or swinging: Avoid using momentum or swinging your body to lift the weight. Focus on a controlled and deliberate movement, emphasizing the contraction in your side deltoid muscles.</li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                              <h3 class="">Cable Crunches</h3>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-4">
+                                    <img class="img-fluid rounded" src="images/demos/cablecrunch.gif">
+                                  </div>
+                                  <div class="col">
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Steps To Perform</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ol>
+                                            <li>Attach a rope handle or straight bar to the high pulley of the cable machine. Adjust the weight to a suitable resistance level. Kneel or sit facing away from the machine with the handle or bar above your head.</li>
+                                            <li>Reach overhead and grip the handle or bar with your hands using an overhand grip. Position your hands shoulder-width apart and ensure that your arms are fully extended.</li>
+                                            <li>Engage your core muscles and exhale as you initiate the movement. Bend forward at the waist, flexing your spine and bringing your head and chest downward. Focus on contracting your abdominal muscles, specifically your rectus abdominis.</li>
+                                            <li>In a controlled manner, inhale and slowly return to the starting position by extending your spine and bringing your head and chest back up, maintaining tension in your core muscles throughout the exercise.</li>
+                                          </ol>
+                                      </div>
+                                    </div>
+                                      <div class="card shadow mb-4">
+                                        <div class="card-body p-5">
+                                            <h4 class="mb-4">Mistakes To Avoid</h4>
+                                            <!-- Ordered list with custom style -->
+                                            <ul>
+                                              <li>Ensure that your arms are not doing the majority of the work. The primary focus should be on contracting your abdominal muscles to perform the crunch, rather than relying on your arms to pull the weight.</li>
+                                              <li>Avoid using momentum or swinging your body to perform the crunches. Focus on a controlled and deliberate movement, engaging your abdominal muscles and minimizing involvement of other muscle groups.</li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                              <h3 class="">Hanging Leg Circles</h3>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-4">
+                                    <img class="img-fluid rounded" src="images/demos/abcircles.gif">
+                                  </div>
+                                  <div class="col">
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Steps To Perform</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ol>
+                                            <li>Grip the bar with an overhand grip, slightly wider than shoulder-width apart. Allow your body to hang freely, with your arms fully extended and your legs straight down.</li>
+                                            <li>Engage your core muscles and exhale as you initiate the movement. Lift your legs together, keeping them straight, and start moving them in a circular motion. Imagine drawing large circles with your feet while maintaining control throughout the movement.</li>
+                                          </ol>
+                                      </div>
+                                    </div>
+                                      <div class="card shadow mb-4">
+                                        <div class="card-body p-5">
+                                            <h4 class="mb-4">Mistakes To Avoid</h4>
+                                            <!-- Ordered list with custom style -->
+                                            <ul>
+                                              <li>Using excessive hip swing: Another mistake is allowing excessive swinging or momentum from the hips during the exercise. This not only takes away the focus from the targeted abdominal muscles but also increases the risk of straining your lower back. Aim for controlled movements, avoiding excessive swinging or kicking of the legs.</li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                              <h1 class="mt-3" id="oblique">Popular Oblique Exercises</h1>
+                              <h3 class="">Hanging Leg Circles</h3>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-4">
+                                    <img class="img-fluid rounded" src="images/demos/abcircles.gif">
+                                  </div>
+                                  <div class="col">
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Steps To Perform</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ol>
+                                            <li>Grip the bar with an overhand grip, slightly wider than shoulder-width apart. Allow your body to hang freely, with your arms fully extended and your legs straight down.</li>
+                                            <li>Engage your core muscles and exhale as you initiate the movement. Lift your legs together, keeping them straight, and start moving them in a circular motion. Imagine drawing large circles with your feet while maintaining control throughout the movement.</li>
+                                          </ol>
+                                      </div>
+                                    </div>
+                                      <div class="card shadow mb-4">
+                                        <div class="card-body p-5">
+                                            <h4 class="mb-4">Mistakes To Avoid</h4>
+                                            <!-- Ordered list with custom style -->
+                                            <ul>
+                                              <li>Using excessive hip swing: Another mistake is allowing excessive swinging or momentum from the hips during the exercise. This not only takes away the focus from the targeted abdominal muscles but also increases the risk of straining your lower back. Aim for controlled movements, avoiding excessive swinging or kicking of the legs.</li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                              
+                              <h1 class="mt-3" id="lat">Popular Lat Exercises</h1>
+                              <h3 class="">Lat Pulldowns</h3>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-4">
+                                    <img class="img-fluid rounded" src="images/demos/latpull2.gif">
+                                  </div>
+                                  <div class="col">
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Steps To Perform</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ol>
+                                            <li>Sit on the machine with your thighs securely under the thigh pad. Grab the bar with your hands slightly wider than shoulder-width apart, palms facing forward or towards you, and maintain a slight bend in your elbows. Keep your feet flat on the ground.</li>
+                                            <li>Initiate the movement by squeezing your shoulder blades together and pulling the bar down towards your upper chest while keeping your torso stable. Focus on engaging your lat muscles. Pause briefly at the bottom of the movement, then slowly and under control, return the bar to the starting position with a controlled upward motion. Repeat for the desired number of repetitions.</li>
+                                          </ol>
+                                      </div>
+                                    </div>
+                                      <div class="card shadow mb-4">
+                                        <div class="card-body p-5">
+                                            <h4 class="mb-4">Mistakes To Avoid</h4>
+                                            <!-- Ordered list with custom style -->
+                                            <ul>
+                                              <li>Maintain proper posture throughout the movement. Keep your chest lifted, shoulders down and back, and avoid rounding your back or hunching your shoulders. Ensure that the movement primarily involves your lat muscles and avoid relying on your biceps or other muscles to perform the exercise.</li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                              <h3 class="mt-3">Seated Machine Row</h3>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-4">
+                                    <img class="img-fluid rounded" src="images/demos/seatedrow.gif">
+                                  </div>
+                                  <div class="col">
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Steps To Perform</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ol>
+                                            <li>Sit on the machine with your chest pressed against the chest pad or backrest. Grab the handles or the attachment with an overhand grip, hands shoulder-width apart or slightly wider.</li>
+                                            <li>Focus on using your back muscles to initiate and perform the exercise. Pause briefly at the fully contracted position, then slowly and under control, extend your arms and return to the starting position. Repeat for the desired number of repetitions.</li>
+                                          </ol>
+                                      </div>
+                                    </div>
+                                      <div class="card shadow mb-4">
+                                        <div class="card-body p-5">
+                                            <h4 class="mb-4">Mistakes To Avoid</h4>
+                                            <!-- Ordered list with custom style -->
+                                            <ul>
+                                              <li>Avoid using momentum or jerking your body to pull the handles or attachment. Focus on a controlled and smooth movement, engaging your back muscles throughout the exercise.</li>
+                                              <li> Begin with a weight that allows you to maintain proper form and technique. Using too much weight can compromise your form, reduce the effectiveness of the exercise, and increase the risk of injury.</li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                              <h3 class="mt-3">Seated Cable Row</h3>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-4">
+                                    <img class="img-fluid rounded" src="images/demos/seatrow.gif">
+                                  </div>
+                                  <div class="col">
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Steps To Perform</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ol>
+                                            <li>Attach a V-bar, straight bar, or handle attachment to the cable.</li>
+                                            <li>Sit on the machine with your knees slightly bent and your feet placed against the footplate. Grab the handles or attachment with an overhand grip, hands shoulder-width apart or slightly wider. Sit tall with a straight back, and keep your chest lifted.</li>
+                                            <li>Start the movement by retracting your shoulder blades and pulling the handles or attachment toward your abdomen, keeping your elbows close to your sides. Focus on using your back muscles, especially your mid-back, to initiate and perform the exercise. Squeeze your shoulder blades together at the fully contracted position, then slowly and under control, extend your arms to return to the starting position. Repeat for the desired number of repetitions.</li>
+                                          </ol>
+                                      </div>
+                                    </div>
+                                      <div class="card shadow mb-4">
+                                        <div class="card-body p-5">
+                                            <h4 class="mb-4">Mistakes To Avoid</h4>
+                                            <!-- Ordered list with custom style -->
+                                            <ul>
+                                              <li>Avoid using momentum or jerking your body to pull the handles or attachment. Focus on a controlled and smooth movement, engaging your back muscles throughout the exercise.</li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                              <h3 class="mt-3">Pull Ups</h3>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-4">
+                                    <img class="img-fluid rounded" src="images/demos/pullup.gif">
+                                  </div>
+                                  <div class="col">
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Steps To Perform</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ol>
+                                            <li>Grab the bar with an overhand grip, hands slightly wider than shoulder-width apart. Your palms should face away from you. Alternatively, you can use an underhand grip (chin-up) with your palms facing towards you.</li>
+                                            <li>Hang from the bar with your arms fully extended, keeping your core engaged and your legs straight or slightly bent.</li>
+                                            <li>Initiate the movement by squeezing your shoulder blades together and pulling your body upward until your chin is above the bar. Lower yourself back down in a controlled manner until your arms are fully extended, and repeat for the desired number of repetitions.</li>
+                                          </ol>
+                                      </div>
+                                    </div>
+                                      <div class="card shadow mb-4">
+                                        <div class="card-body p-5">
+                                            <h4 class="mb-4">Mistakes To Avoid</h4>
+                                            <!-- Ordered list with custom style -->
+                                            <ul>
+                                              <li>Not fully extending or contracting: Ensure that you fully extend your arms at the bottom of the movement, achieving a complete hang, and fully contract your back muscles by bringing your chin above the bar. Avoid partial range of motion as it limits the effectiveness of the exercise.</li>
+                                              <li>Poor form and shoulder positioning: Maintain proper form throughout the exercise. Keep your core engaged, avoid rounding your shoulders, and focus on pulling with your back muscles. Avoid shrugging your shoulders or excessively arching your back. Proper form ensures optimal engagement of the targeted muscles and reduces the risk of injury.</li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                              <h3 class="mt-3">Kneeling Lat Pulldowns</h3>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-4">
+                                    <img class="img-fluid rounded" src="images/demos/kneelpull.gif">
+                                  </div>
+                                  <div class="col">
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Steps To Perform</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ol>
+                                            <li>Attach a rope or a wide-grip bar to a high pulley on a cable machine. Kneel down facing the machine and adjust the knee pad to a comfortable position. Ensure that the pulley is at a height where you can fully extend your arms overhead.</li>
+                                            <li>Kneel on the pad, facing the machine with your knees firmly planted on the ground and your hips resting on your heels. Grab the handles or the attachment with an overhand grip, hands wider than shoulder-width apart.</li>
+                                            <li>Start the movement by retracting your shoulder blades and pulling the handles or attachment down towards your upper chest, keeping your elbows close to your sides. Focus on using your lat muscles to initiate and perform the exercise. Pause briefly at the fully contracted position, then slowly and under control, allow the handles to return to the starting position with a controlled upward motion. Repeat for the desired number of repetitions.</li>
+                                          </ol>
+                                      </div>
+                                    </div>
+                                      <div class="card shadow mb-4">
+                                        <div class="card-body p-5">
+                                            <h4 class="mb-4">Mistakes To Avoid</h4>
+                                            <!-- Ordered list with custom style -->
+                                            <ul>
+                                              <li>Leaning back excessively: Maintain an upright position throughout the movement. Avoid leaning back excessively or arching your back, as this can reduce the activation of your lats and increase stress on your lower back. Keep your core engaged and your torso stable during the exercise.</li>
+                                              <li>Using momentum or jerking motions: Avoid using momentum or jerking your body to pull the handles or attachment. Focus on a controlled and smooth movement, engaging your lat muscles throughout the exercise.</li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                              <h1 class="mt-3" id="shoulder">Popular Shoulder Exercises</h1>
+                              <h3 class="">Machine Shoulder Press</h3>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-4">
+                                    <img class="img-fluid rounded" src="images/demos/shoulderp.gif">
+                                  </div>
+                                  <div class="col">
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Steps To Perform</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ol>
+                                            <li>Sit on the machine with your back firmly against the backrest and your feet flat on the floor. Grasp the handles or grips with your palms facing forward and position your elbows at approximately 90 degrees.</li>
+                                            <li>Push the handles or grips upward by extending your arms in a controlled manner until your arms are almost fully extended, but without locking your elbows. Exhale as you press the weight overhead. Pause briefly at the top of the movement, focusing on contracting your shoulder muscles.</li>
+                                            <li>In a controlled manner, lower the handles back down to the starting position, bending your elbows and allowing your forearms to move downward until your hands reach shoulder level.</li>
+                                          </ol>
+                                      </div>
+                                    </div>
+                                      <div class="card shadow mb-4">
+                                        <div class="card-body p-5">
+                                            <h4 class="mb-4">Mistakes To Avoid</h4>
+                                            <!-- Ordered list with custom style -->
+                                            <ul>
+                                              <li>Relying on momentum: Avoid using momentum or swinging your body to lift the weight. Focus on a controlled and deliberate movement, engaging your shoulder muscles throughout the exercise.</li>
+                                              <li>Using excessive weight: Choose a weight that allows you to maintain proper form and control throughout the exercise. Using too much weight can compromise your technique and increase the risk of injury.</li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                              <h3 class="">Seated Overhead Barbell Press</h3>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-4">
+                                    <img class="img-fluid rounded" src="images/demos/overhead.gif">
+                                  </div>
+                                  <div class="col">
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Steps To Perform</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ol>
+                                            <li>Grip the barbell with a slightly wider than shoulder-width grip. Lift the barbell off the rack and bring it down to your upper chest, with your elbows bent and your forearms perpendicular to the ground. Stand tall with your core engaged and your feet planted firmly on the ground.</li>
+                                            <li>Press the barbell overhead by extending your arms upward while keeping the barbell close to your body. As you lift the barbell, exhale and fully extend your arms until they are straight overhead. Hold the position briefly at the top, then slowly lower the barbell back to the starting position, allowing your elbows to bend. Repeat for the desired number of repetitions.</li>
+                                          </ol>
+                                      </div>
+                                    </div>
+                                      <div class="card shadow mb-4">
+                                        <div class="card-body p-5">
+                                            <h4 class="mb-4">Mistakes To Avoid</h4>
+                                            <!-- Ordered list with custom style -->
+                                            <ul>
+                                              <li>Lack of control and stability: Focus on controlled movements throughout the exercise. Avoid using momentum or jerking the barbell upward. Engage your shoulder and core muscles to maintain stability and control throughout the movement.</li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                              <h1 class="mt-3" id="forearm">Popular Forearm Exercises</h1>
+                              <h3 class="">Hammer Curls</h3>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-4">
+                                    <img class="img-fluid rounded" src="images/demos/hammer.gif">
+                                  </div>
+                                  <div class="col">
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Steps To Perform</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ol>
+                                            <li>Keeping your upper arms stationary, exhale and curl the dumbbells forward while maintaining the hammer grip (palms facing your torso throughout the movement). Continue the curl until your forearms are fully contracted and the dumbbells are close to your shoulders.</li>
+                                            <li>In a controlled manner, inhale and slowly lower the dumbbells back down to the starting position, allowing your forearms to fully extend. Repeat for the desired number of repetitions.</li>
+                                          </ol>
+                                      </div>
+                                    </div>
+                                      <div class="card shadow mb-4">
+                                        <div class="card-body p-5">
+                                            <h4 class="mb-4">Mistakes To Avoid</h4>
+                                            <!-- Ordered list with custom style -->
+                                            <ul>
+                                              <li>Allowing the wrists to bend: Maintain a neutral wrist position throughout the exercise. Avoid allowing your wrists to bend excessively or collapse inward, as this can shift the focus away from your forearms and place unnecessary strain on your wrists.</li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                            <h1 class="mt-3" id="trap">Popular Trap Exercises</h1>        
+                            <h3 class="">Deadlift</h3>
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-4">
+                                  <img class="img-fluid rounded" src="images/demos/deadlift2.gif">
+                                </div>
+                                <div class="col">
+                                  <div class="card shadow mb-4">
+                                    <div class="card-body p-5">
+                                        <h4 class="mb-4">Steps To Perform</h4>
+                                        <!-- Ordered list with custom style -->
+                                        <ol>
+                                          <li>Place the barbell on the ground in front of you with the weight evenly distributed. Position your feet hip-width apart, toes pointing forward or slightly outward. Bend your knees and hinge at the hips to grip the barbell with an overhand grip or a mixed grip (one hand overhand, one hand underhand).</li>
+                                          <li>With your back straight, engage your core, and lift your chest. Keep your shoulders back and down. Your arms should be fully extended and hanging perpendicular to the ground. Ensure that your weight is balanced evenly over your feet.</li>
+                                          <li>Initiate the movement by driving through your heels, extending your hips and knees simultaneously to lift the barbell off the ground. Keep your back straight and maintain a neutral spine throughout the lift. Stand tall with your shoulders back and squeeze your glutes at the top of the movement. Lower the barbell back to the ground by reversing the movement, hinging at the hips and bending your knees. Repeat for the desired number of repetitions.</li>
+                                        </ol>
+                                    </div>
+                                  </div>
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Mistakes To Avoid</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ul>
+                                            <li>Rounded back: Maintain a neutral spine throughout the lift and avoid rounding your back. This can lead to increased stress on your spine and increase the risk of injury. Focus on keeping your chest lifted and your back straight throughout the movement.</li>
+                                            <li>Lifting with your back instead of your legs: Engage your leg muscles, particularly your hamstrings and glutes, to drive the movement. Avoid relying solely on your back muscles to lift the weight. Push through your heels and use the power of your lower body to lift the barbell.</li>
+                                          </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                            <h1 class="mt-3" id="upperb">Popular Upper Back Exercises</h1>        
+                            <h3 class="">Deadlift</h3>
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-4">
+                                  <img class="img-fluid rounded" src="images/demos/deadlift2.gif">
+                                </div>
+                                <div class="col">
+                                  <div class="card shadow mb-4">
+                                    <div class="card-body p-5">
+                                        <h4 class="mb-4">Steps To Perform</h4>
+                                        <!-- Ordered list with custom style -->
+                                        <ol>
+                                          <li>Place the barbell on the ground in front of you with the weight evenly distributed. Position your feet hip-width apart, toes pointing forward or slightly outward. Bend your knees and hinge at the hips to grip the barbell with an overhand grip or a mixed grip (one hand overhand, one hand underhand).</li>
+                                          <li>With your back straight, engage your core, and lift your chest. Keep your shoulders back and down. Your arms should be fully extended and hanging perpendicular to the ground. Ensure that your weight is balanced evenly over your feet.</li>
+                                          <li>Initiate the movement by driving through your heels, extending your hips and knees simultaneously to lift the barbell off the ground. Keep your back straight and maintain a neutral spine throughout the lift. Stand tall with your shoulders back and squeeze your glutes at the top of the movement. Lower the barbell back to the ground by reversing the movement, hinging at the hips and bending your knees. Repeat for the desired number of repetitions.</li>
+                                        </ol>
+                                    </div>
+                                  </div>
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Mistakes To Avoid</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ul>
+                                            <li>Rounded back: Maintain a neutral spine throughout the lift and avoid rounding your back. This can lead to increased stress on your spine and increase the risk of injury. Focus on keeping your chest lifted and your back straight throughout the movement.</li>
+                                            <li>Lifting with your back instead of your legs: Engage your leg muscles, particularly your hamstrings and glutes, to drive the movement. Avoid relying solely on your back muscles to lift the weight. Push through your heels and use the power of your lower body to lift the barbell.</li>
+                                          </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                            <h1 class="mt-3" id="lowerb">Popular Lower Back Exercises</h1>        
+                            <h3 class="">Deadlift</h3>
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-4">
+                                  <img class="img-fluid rounded" src="images/demos/deadlift2.gif">
+                                </div>
+                                <div class="col">
+                                  <div class="card shadow mb-4">
+                                    <div class="card-body p-5">
+                                        <h4 class="mb-4">Steps To Perform</h4>
+                                        <!-- Ordered list with custom style -->
+                                        <ol>
+                                          <li>Place the barbell on the ground in front of you with the weight evenly distributed. Position your feet hip-width apart, toes pointing forward or slightly outward. Bend your knees and hinge at the hips to grip the barbell with an overhand grip or a mixed grip (one hand overhand, one hand underhand).</li>
+                                          <li>With your back straight, engage your core, and lift your chest. Keep your shoulders back and down. Your arms should be fully extended and hanging perpendicular to the ground. Ensure that your weight is balanced evenly over your feet.</li>
+                                          <li>Initiate the movement by driving through your heels, extending your hips and knees simultaneously to lift the barbell off the ground. Keep your back straight and maintain a neutral spine throughout the lift. Stand tall with your shoulders back and squeeze your glutes at the top of the movement. Lower the barbell back to the ground by reversing the movement, hinging at the hips and bending your knees. Repeat for the desired number of repetitions.</li>
+                                        </ol>
+                                    </div>
+                                  </div>
+                                    <div class="card shadow mb-4">
+                                      <div class="card-body p-5">
+                                          <h4 class="mb-4">Mistakes To Avoid</h4>
+                                          <!-- Ordered list with custom style -->
+                                          <ul>
+                                            <li>Rounded back: Maintain a neutral spine throughout the lift and avoid rounding your back. This can lead to increased stress on your spine and increase the risk of injury. Focus on keeping your chest lifted and your back straight throughout the movement.</li>
+                                            <li>Lifting with your back instead of your legs: Engage your leg muscles, particularly your hamstrings and glutes, to drive the movement. Avoid relying solely on your back muscles to lift the weight. Push through your heels and use the power of your lower body to lift the barbell.</li>
+                                          </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+
+
+
+                          </div>
+                          </div>
+                            
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                     </div>
+                    </div>
+
+                      
+
+                      
+                      
+                </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
